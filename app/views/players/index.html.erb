@@ -21,7 +21,9 @@
     <td><%= player.last_name %></td>
     <td><%= player.age %></td>
     <td><%= player.team_id %></td>
-    <td><a href="/players/<%= player.id%>">Show</a> </td>
+    <td>
+      <a href="/players/<%= player.id%>">Show</a>  <a href="/players/<%= player.id%>/edit">Edit</a>
+    </td>
   </tr>
   <% end %>
   </tbody>

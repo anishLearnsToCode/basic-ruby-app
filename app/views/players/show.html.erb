@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><%= @current_player.first_name.upcase + ' ' + @current_player.last_name.upcase %></h1>
+  <p>Age: <%= @current_player.age%></p>
+  <p>Team: <%= Team.find(@current_player.team_id).name %></p>
+
+  <a href="/players">All Players > </a>
+</div>
