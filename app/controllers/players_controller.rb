@@ -21,4 +21,7 @@ class PlayersController < ApplicationController
     params.require(:player).permit(:first_name, :last_name, :age, :team_id)
   end
 
+  def show
+  end
+
 end
