@@ -7,11 +7,18 @@ class PlayersController < ApplicationController
   end
 
   def create
-    new_player = Player.new
-    new_player.first_name= params[:player][:first_name]
-    new_player.last_name= params[:player][:last_name]
-    new_player.age= params[:player][:age]
-    new_player.save
+    new_player = Player.new(player_params)
+
+    if new_player.save
+      redirect_to '/players'
+    else
+      flash[:errors] = new_player.errors.full_messages
+      redirect_to '/players/new'
+    end
   end
-  
+
+  private def player_params
+    params.require(:player).permit(:first_name, :last_name, :age, :team_id)
+  end
+
 end

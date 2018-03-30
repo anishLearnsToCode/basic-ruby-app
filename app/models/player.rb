@@ -5,8 +5,9 @@ class Player < ApplicationRecord
   has_many :games, through: :appearances
 
   validates :first_name, presence: true
-  validates :last_name, presence: true, on: :create
-  validates :age, :numericality => {greater_than: 0, less_than_or_equal_to: 130}
+  validates :last_name, presence: true
+  validates :age, presence: true
+  # validates :age, :numericality => {greater_than: 0, less_than_or_equal_to: 130}
 
   # Removing the custom validation as that wasn't required
     # validate :first_name, :first_name_starts_with_vowel

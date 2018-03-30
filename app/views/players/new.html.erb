@@ -1,5 +1,11 @@
 <div class="container">
   <h1>Create New Player</h1>
+  
+  <% if flash[:errors]  %>
+      <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+  <% end %>
 
   <form action="/players" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -12,6 +18,9 @@
 
     <label>Age</label>
     <input type="text" name="player[age]"><br>
+
+    <label>Team ID</label>
+    <input type="text" name="player[team_id]"><br>
 
     <input type="submit" value="Create">
   </form>
