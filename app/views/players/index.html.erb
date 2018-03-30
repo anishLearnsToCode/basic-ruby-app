@@ -1,0 +1,29 @@
+
+<div class="container">
+
+  <h1>Players</h1>
+
+<table class="table table-responsive table-bordered">
+  <thead>
+  <tr class="bg-danger">
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Age</td>
+    <td>Team ID</td>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @players.each do |player| %>
+  <tr>
+    <td><%= player.first_name %></td>
+    <td><%= player.last_name %></td>
+    <td><%= player.age %></td>
+    <td><%= player.team_id %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+  <p><%= @players.length %> Players</p>
+</div>
