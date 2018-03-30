@@ -2,7 +2,7 @@ class Player < ApplicationRecord
   has_one :address
   belongs_to :team
   has_many :appearances
-  has_many :games, through :appearances
+  has_many :games, through: :appearances
 
   validates :first_name, presence: true
   validates :last_name, presence: true, on: :create
