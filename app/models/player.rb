@@ -3,12 +3,13 @@ class Player < ApplicationRecord
   validates :last_name, presence: true, on: :create
   validates :age, :numericality => {greater_than: 0, less_than_or_equal_to: 130}
 
-  validate :first_name, :first_name_starts_with_vowel
-
-  def first_name_starts_with_vowel
-    vowel = ['a', 'e', 'i', 'o', 'u']
-    unless vowel.include? self.first_name[0].downcase
-      errors.add(:first_name, 'First Name must start with a vowel')
-    end
-  end
+  # Removing the custom validation as that wasn't required
+    # validate :first_name, :first_name_starts_with_vowel
+  #
+  # def first_name_starts_with_vowel
+  #   vowel = ['a', 'e', 'i', 'o', 'u']
+  #   unless vowel.include? self.first_name[0].downcase
+  #     errors.add(:first_name, 'must start with a vowel')
+  #   end
+  # end
 end
