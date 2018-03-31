@@ -22,7 +22,9 @@
     <td><%= player.age %></td>
     <td><%= player.team_id %></td>
     <td>
-      <a href="/players/<%= player.id%>">Show</a>  <a href="/players/<%= player.id%>/edit">Edit</a>
+      <a href="/players/<%= player.id%>">Show</a>
+      <a href="/players/<%= player.id%>/edit">Edit</a>
+      <a href="/players/<%= player.id%>" data-method="delete" data-confirm="Are You Sure?">Delete</a>
     </td>
   </tr>
   <% end %>

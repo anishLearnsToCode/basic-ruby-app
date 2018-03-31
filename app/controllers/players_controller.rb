@@ -39,4 +39,10 @@ class PlayersController < ApplicationController
     end
   end
 
+  def destroy
+    player = Player.find(params[:id])
+    player.destroy
+    redirect_to '/players'
+  end
+
 end
