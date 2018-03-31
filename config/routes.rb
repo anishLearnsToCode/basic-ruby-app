@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'players' => 'players#index'
 
   # To edit individual Players
-  get 'players/:id/edit' => 'players#edit'
+  get 'players/:id/edit' => 'players#edit', as: 'players_edit'
   patch 'players/:id' => 'players#update'
 
   # To create a new player
@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   delete 'players/:id' => 'players#destroy'
 
   # To obtain individual player ID's dynamically
-  get 'players/:id' => 'players#show', as: 'player_show'
+  get 'players/:id' => 'players#show', as: 'players_show'
 end
