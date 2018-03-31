@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   # To Archive a particular player
   get 'players/:id/archive' => 'players#archive', as: 'players_archive'
 
+  get 'players/mail' => 'registration_mailer#new_player'
+
   # To obtain individual player ID's dynamically
   get 'players/:id' => 'players#show', as: 'players_show'
 end
