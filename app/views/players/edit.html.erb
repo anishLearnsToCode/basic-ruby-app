@@ -4,11 +4,7 @@
   <h1><%= @current_player.first_name.upcase + ' ' + @current_player.last_name.upcase %></h1>
   <h3>Edit Records</h3>
 
-  <% if flash[:errors]  %>
-      <% flash[:errors].each do |error| %>
-          <p><%= error %></p>
-      <% end %>
-  <% end %>
+  <%= render partial: 'players/error' %>
 
   <form action="/players/<%= @current_player.id%>" method="post">
     <input type="hidden" name="_method" value="patch">

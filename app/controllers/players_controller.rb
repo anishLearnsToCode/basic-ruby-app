@@ -19,6 +19,7 @@ class PlayersController < ApplicationController
 
   def create
     new_player = Player.new(player_params)
+    new_player.update(archived: false)
 
     if new_player.save
       # redirect_to '/players'
