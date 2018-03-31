@@ -4,6 +4,8 @@
   <h1>Players</h1>
   <h3><%= pluralize(@players.length, 'Player') %></h3>
 
+
+  <% if @priority_players > 0 %>
   <p><%= pluralize(@priority_players, 'Priority Player') %></p>
 <table class="table table-responsive table-bordered">
   <thead>
@@ -35,6 +37,7 @@
   <% end %>
   </tbody>
 </table>
+      <% end %>
 
   <% if @archived_players > 0 %>
   <h2>Archived Players</h2>
