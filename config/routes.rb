@@ -6,9 +6,6 @@ Rails.application.routes.draw do
   # Players Controller routes
   get 'players' => 'players#index'
 
-  # To obtain individual player ID's dynamically
-  get 'players/:id' => 'players#show'
-
   # To edit individual Players
   get 'players/:id/edit' => 'players#edit'
   patch 'players/:id' => 'players#update'
@@ -19,4 +16,7 @@ Rails.application.routes.draw do
 
   # To delete a particular player
   delete 'players/:id' => 'players#destroy'
+
+  # To obtain individual player ID's dynamically
+  get 'players/:id' => 'players#show', as: 'player_show'
 end
