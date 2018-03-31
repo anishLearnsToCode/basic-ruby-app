@@ -31,7 +31,7 @@
   </tbody>
 </table>
 
-  <p><%= @players.length %> Players</p>
+  <p><%= pluralize(@players.length, 'Player') %></p>
 
   <!--<a href="/players/new">New Player</a>-->
   <%= link_to 'New Player', players_new_path %>
