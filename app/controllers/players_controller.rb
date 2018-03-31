@@ -1,6 +1,16 @@
 class PlayersController < ApplicationController
   def index
     @players = Player.all
+    @priority_players = number_of_priority_players(@players)
+    @archived_players = @players.length - @priority_players
+  end
+
+  def number_of_priority_players(dataBase)
+    count = 0
+    dataBase.each do |player|
+      count += 1 if !player.archived
+    end
+    return count
   end
 
   def new
@@ -44,6 +54,12 @@ class PlayersController < ApplicationController
     player = Player.find(params[:id])
     player.destroy
     redirect_to '/players'
+  end
+
+  def archive
+    current_player = Player.find(params[:id])
+    current_player.update(archived: !current_player.archived)
+    redirect_to root_path
   end
 
 end

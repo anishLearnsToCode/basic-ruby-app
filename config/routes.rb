@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   # To delete a particular player
   delete 'players/:id' => 'players#destroy'
 
+  # To Archive a particular player
+  get 'players/:id/archive' => 'players#archive', as: 'players_archive'
+
   # To obtain individual player ID's dynamically
   get 'players/:id' => 'players#show', as: 'players_show'
 end
