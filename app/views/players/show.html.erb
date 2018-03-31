@@ -1,7 +1,9 @@
+<%content_for(:title, @current_player.first_name)%>
+
 <div class="container">
   <h1><%= @current_player.first_name.upcase + ' ' + @current_player.last_name.upcase %></h1>
   <p>Age: <%= @current_player.age%></p>
   <p>Team: <%= Team.find(@current_player.team_id).name %></p>
 
-  <%= link_to 'All Players >', players_path %>>
+  <%= link_to 'All Players >', players_path %>
 </div>
