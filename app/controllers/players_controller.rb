@@ -29,4 +29,14 @@ class PlayersController < ApplicationController
     @current_player = Player.find(params[:id])
   end
 
+  def update
+    current_player = Player.find(params[:id])
+    if current_player.update(player_params)
+      redirect_to '/players'
+    else
+      flash[:errors] = current_player.errors.full_messages
+      redirect_to "/players/#{current_player.id}/edit"
+    end
+  end
+
 end

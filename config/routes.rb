@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'players/:id/edit' => 'players#edit'
   get 'players/new' => 'players#new'
   post 'players' => 'players#create'
+  patch 'players/:id' => 'players#update'
 end
