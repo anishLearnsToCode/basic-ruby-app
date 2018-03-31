@@ -10,24 +10,44 @@
       <% end %>
   <% end %>
 
-  <form action="/players/<%= @current_player.id%>" method="post">
-    <input type="hidden" name="_method" value="patch">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%= form_for(@player) do |f|%>
+      <p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </p>
+      <p>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </p>
+      <p>
+        <%= f.label :age %>
+        <%= f.text_field :age %>
+      </p>
+      <p>
+        <%= f.label :team_id %>
+        <%= f.text_field :team_id %>
+      </p>
+      <%= f.submit %>
+  <% end %>
 
-    <label>First Name</label>
-    <input type="text" name="player[first_name]" value="<%= @current_player.first_name%>"><br>
+  <!--<form action="/players/<%= @current_player.id%>" method="post">-->
+    <!--<input type="hidden" name="_method" value="patch">-->
+    <!--<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">-->
 
-    <label>Last Name</label>
-    <input type="text" name="player[last_name]" value="<%= @current_player.last_name %>"><br>
+    <!--<label>First Name</label>-->
+    <!--<input type="text" name="player[first_name]" value="<%= @current_player.first_name%>"><br>-->
 
-    <label>Age</label>
-    <input type="text" name="player[age]" value="<%= @current_player.age %>"><br>
+    <!--<label>Last Name</label>-->
+    <!--<input type="text" name="player[last_name]" value="<%= @current_player.last_name %>"><br>-->
 
-    <label>Team ID</label>
-    <input type="text" name="player[team_id]" value="<%= @current_player.team_id %>"><br>
+    <!--<label>Age</label>-->
+    <!--<input type="text" name="player[age]" value="<%= @current_player.age %>"><br>-->
 
-    <input type="submit" value="Update">
-  </form>
+    <!--<label>Team ID</label>-->
+    <!--<input type="text" name="player[team_id]" value="<%= @current_player.team_id %>"><br>-->
+
+    <!--<input type="submit" value="Update">-->
+  <!--</form>-->
 
   <%= link_to'All Players >', players_path %>
 </div>

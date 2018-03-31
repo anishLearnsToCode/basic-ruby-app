@@ -10,10 +10,11 @@ class PlayersController < ApplicationController
     dataBase.each do |player|
       count += 1 if !player.archived
     end
-    return count
+    count
   end
 
   def new
+    @player = Player.new
   end
 
   def create
