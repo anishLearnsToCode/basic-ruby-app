@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # To obtain individual player ID's dynamically
   get 'players/:id' => 'players#show'
+  get 'players/:id/edit' => 'players#edit'
   get 'players/new' => 'players#new'
   post 'players' => 'players#create'
 end

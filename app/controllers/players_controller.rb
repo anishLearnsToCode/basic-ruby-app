@@ -25,4 +25,8 @@ class PlayersController < ApplicationController
     @current_player = Player.find(params[:id])
   end
 
+  def edit
+
+  end
+
 end
