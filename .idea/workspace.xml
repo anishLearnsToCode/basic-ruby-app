@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3bab5cdf-5f17-44e9-ab14-a07ff2a2a549" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/players/index.html.erb" afterPath="$PROJECT_DIR$/app/views/players/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -90,8 +89,8 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/players/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="425">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -132,8 +131,8 @@
         <option value="$PROJECT_DIR$/app/views/players/edit.html.erb" />
         <option value="$PROJECT_DIR$/config/puma.rb" />
         <option value="$PROJECT_DIR$/app/controllers/players_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/players/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/players/index.html.erb" />
       </list>
     </option>
   </component>
@@ -359,12 +358,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522350071358</updated>
       <workItem from="1522350072696" duration="4187000" />
-      <workItem from="1522387055133" duration="24364000" />
+      <workItem from="1522387055133" duration="24420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28551000" />
+    <option name="totallyTimeSpent" value="28607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -735,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/players/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="425">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding />
         </state>
       </provider>
