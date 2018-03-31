@@ -1,0 +1,19 @@
+<%= form_for(@player) do |f|%>
+    <p>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </p>
+    <p>
+      <%= f.label :age %>
+      <%= f.text_field :age %>
+    </p>
+    <p>
+      <%= f.label :team_id %>
+      <%= f.text_field :team_id %>
+    </p>
+    <%= f.submit %>
+<% end %>

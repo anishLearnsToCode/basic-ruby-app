@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'players#index'
 
   # Players Controller routes
-  get 'players' => 'players#index'
+  get 'players' => 'players#index', as: 'players_index'
 
   # To edit individual Players
   get 'players/:id/edit' => 'players#edit', as: 'players_edit'
