@@ -1,0 +1,31 @@
+<div class="container">
+  <h1><%= @current_player.first_name.upcase + ' ' + @current_player.last_name.upcase %></h1>
+  <h3>Edit Records</h3>
+
+  <% if flash[:errors]  %>
+      <% flash[:errors].each do |error| %>
+          <p><%= error %></p>
+      <% end %>
+  <% end %>
+
+  <form action="/players" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label>First Name</label>
+    <input type="text" name="player[first_name]" value="<%= @current_player.first_name%>"><br>
+
+    <label>Last Name</label>
+    <input type="text" name="player[last_name]" value="<%= @current_player.last_name %>"><br>
+
+    <label>Age</label>
+    <input type="text" name="player[age]" value="<%= @current_player.age %>"><br>
+
+    <label>Team ID</label>
+    <input type="text" name="player[team_id]" value="<%= @current_player.team_id %>"><br>
+
+    <input type="submit" value="Update">
+  </form>
+
+  <a href="/players">All Players > </a>
+</div>
