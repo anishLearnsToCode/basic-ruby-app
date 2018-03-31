@@ -10,7 +10,8 @@ class PlayersController < ApplicationController
     new_player = Player.new(player_params)
 
     if new_player.save
-      redirect_to '/players'
+      # redirect_to '/players'
+      redirect_to root_path
     else
       flash[:errors] = new_player.errors.full_messages
       redirect_to '/players/new'
@@ -32,10 +33,10 @@ class PlayersController < ApplicationController
   def update
     current_player = Player.find(params[:id])
     if current_player.update(player_params)
-      redirect_to '/players'
+      redirect_to root_path
     else
       flash[:errors] = current_player.errors.full_messages
-      redirect_to "/players/#{current_player.id}/edit"
+      redirect_to players_edit_path(current_player.id)
     end
   end
 

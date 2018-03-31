@@ -3,5 +3,5 @@
   <p>Age: <%= @current_player.age%></p>
   <p>Team: <%= Team.find(@current_player.team_id).name %></p>
 
-  <a href="/players">All Players > </a>
+  <%= link_to 'All Players >', players_path %>>
 </div>
